@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="My Portfolio website to showcase the work, I have done so far, the services I provide and all my professionals life.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, portfolio website">
+    <meta name="author" content="Nishkarsh Gupta">
+
+
+    <title>CodeWithNIk - Portfolio website</title>
+    <link rel="shortcut icon" href="images/FavIcon/Fav/favicon.ico" type="image/x-icon">
+
+
+
+
+    <!-- ================================================
+        Links
+    ================================================ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Font-Awesome Link-->
+    <link rel="stylesheet" href="CSS/style.css"> <!-- CSS Link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" /> <!-- Swiper Link-->
+    <script defer src="index.js"></script> <!-- Index.JS Link-->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+
+
+</head>
+
+<body>
+    <header class="header">
+        <img src="Images/logo 2.png" alt="our main image" class="logo">
+
+        <nav class="navbar">
+            <ul class="navbar-lists">
+                <li><a href="#home" class="navbar-link home-link">Home</a></li>
+                <li><a href="#about-section" class="navbar-link about-link">About</a></li>
+                <li><a href="#service-section" class="navbar-link service-link">Services</a></li>
+                <li><a href="#portfolio-section" class="navbar-link portfolio-link">Portfolio</a></li>
+                <li><a href="#contact-section" class="navbar-link contact-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-navbar-btn">
+            <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+            <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+        </div>
+    </header>
+
+    <!-- ==========================================================
+    Our Main Hero Section Start
+    ========================================================== -->
+    <main>
+        <section class="section-hero section" id="home">
+            <div class="container grid grid-two-column">
+                <div class="section-hero-data">
+                    <p class="hero-top-data">this is me</p>
+                    <h1 class="hero-heading">Nishkarsh Gupta
+                    </h1>
+                    <p class="hero-para">I,m Nishkarsh Gupta. A Frontend Developer, IInd year Student and Freelancer. A
+                        Frontend Developer, IInd year Student and Freelancer.</p>
+                    <div>
+                        <a href="mailto:nishkarshgupta111@gmail.com" class="btn hireme-btn">Hire me</a>
+                    </div>
+                </div>
+                <!-- hero section right side -->
+                <div class="section-hero-image">
+                    <picture>
+                        <source srcset="Images/hero-com.webp" type="image/webp">
+                        <source srcset="Images/hero-compressed2.jpg" type="image/jpg">
+                        <img src="Images/hero-compressed2.jpg" alt="this is me Nishkarsh Gupta" class="hero-img">
+                    </picture>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================================
+    Our About Section Start
+    ========================================================== -->
+
+    <section class="section-biodata section" id="about-section">
+        <div class="container grid grid-two-column">
+            <div class="bio-image">
+                <img src="images/user.jpeg" alt="my bio data image">
+            </div>
+            <!-- bio right side data -->
+            <div class="bio-data">
+                <h2 class="common-heading">About</h2>
+                <p class="bio-para">I am a web developer from Firozabad (UP), I enjoy building everything from small
+                    business sites to rich interactive web apps, If you are a business seeking a web presence or an
+                    employer looking to hire, you can get in touch with me in <a href="mailto:nishkarshgupta111@gmail.com">--->Here-</a>
+                </p>
+                <br>
+                <p class="bio-para">I am an allround web developer. I am a senior programmer with good knowledge of
+                    front-end techniques.
+                </p>
+                <div class="bio-data-stats">
+                    <div class="bio-stats">
+                        <h3>Design</h3>
+                        <div class="bio-progress-bar">
+                            <span>80%</span>
+                        </div>
+                    </div>
+                    <div class="bio-stats">
+                        <h3>HTML</h3>
+                        <div class="bio-progress-bar bio-progress-2">
+                            <span>99%</span>
+                        </div>
+                    </div>
+                    <div class="bio-stats">
+                        <h3>CSS</h3>
+                        <div class="bio-progress-bar bio-progress-3">
+                            <span>90%</span>
+                        </div>
+                    </div>
+                    <div class="bio-stats">
+                        <h3>Bootstrap</h3>
+                        <div class="bio-progress-bar bio-progress-4">
+                            <span>85%</span>
+                        </div>
+                    </div>
+                    <div class="bio-stats">
+                        <h3>JavaScript</h3>
+                        <div class="bio-progress-bar bio-progress-5">
+                            <span>70%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bio-data-btn ">
+                    <a href="https://drive.google.com/file/d/1LobVlk9hpZsqMNJVmgBOGpyf2SueKJnx/view?usp=share_link"
+                        download target="_blank" style="padding: 1.36rem 2.25rem;" class="btn">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+    Our Portfolio Section Start
+    ========================================================== -->
+    <section class="section section-portfolio" id="portfolio-section">
+        <div class="container">
+            <h2 class="common-heading">Latest Works</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing Lorem, ipsum dolor.elit. Cupiditate veniam praesentium
+                illum.
+            </p>
+        </div>
+
+        <div class="p-btns">
+            <div class="btn p-btn" data-btn-num="1">Website</div>
+            <div class="btn p-btn" data-btn-num="2">Youtube</div>
+            <div class="btn p-btn" data-btn-num="3">Design</div>
+        </div>
+
+        <div class="container grid grid-three-column portfolio-images">
+            <div class="img-overlay p-btn--1 ">
+
+                <video style="width: 100%; 
+                    border-radius: 7px; 
+                    position: relative; 
+                    overflow: hidden;" loop autoplay="autoplay" muted>
+                    <source src="Images/folio/CAROUSEL.mp4" type="video/mp4">
+                </video>
+
+                <!-- <img src="Images/folio/1.png" alt="my works"> -->
+                <div class="overlay">
+                    <a href="https://nik-carousel.netlify.app/" target="_blank" class="common-heading">Project 1</a>
+                </div>
+            </div>
+            <div class="img-overlay p-btn--3  ">
+                <img src="Images/folio/1.jpg" alt="my works">
+                <div class="overlay">
+                    <a href="/404.html" target="_blank" class="common-heading">Project 2</a>
+                </div>
+            </div>
+            <div class="img-overlay p-btn--1 ">
+                <img src="Images/folio/3.jpg" alt="portfolio-images">
+                <div class="overlay">
+                    <a href="/404.html" target="_blank" class="common-heading">Project 3</a>
+                </div>
+            </div>
+            <div class="img-overlay p-btn--1 p-btn--2 ">
+                <img src="Images/folio/5.jpg" alt="portfolio-images">
+                <div class="overlay">
+                    <a href="/404.html" target="_blank" class="common-heading">Project 4</a>
+                </div>
+            </div>
+            <div class="img-overlay p-btn--2 ">
+                <img src="Images/folio/3.jpg" alt="portfolio-images">
+                <div class="overlay">
+                    <a href="/404.html" target="_blank" class="common-heading">Project 5</a>
+                </div>
+            </div>
+            <div class="img-overlay p-btn--1">
+                <img src="Images/folio/5.jpg" alt="portfolio-images">
+                <div class="overlay">
+                    <a href="/404.html" target="_blank" class="common-heading">Project 6</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==========================================================
+    Our work counter Section Start
+    ========================================================== -->
+
+    <section class="section section-work-data">
+        <div class="container grid grid-four-column">
+            <div>
+                <h2 class="counter-numbers" data-number="2000">0+</h2>
+                <p>project completed</p>
+            </div>
+            <div>
+                <h2 class="counter-numbers" data-number="6000">0+</h2>
+                <p>Happy Clients</p>
+            </div>
+            <div>
+                <h2 class="counter-numbers" data-number="5000">0+</h2>
+                <p>cups of coffee</p>
+            </div>
+            <div>
+                <h2 class="counter-numbers" data-number="3000">0+</h2>
+                <p>real professionals</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+    Our services Section Start
+    ========================================================== -->
+
+    <section class="section section-services" id="service-section">
+        <div class="container">
+            <h2 class="common-heading">Services Offers</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum velit nemo soluta sapiente incidunt animi,
+                repellendus possimus excepturi dolor?
+            </p>
+        </div>
+
+        <!-- services offers card -->
+        <div class="container grid grid-three-column">
+
+            <div class="service-box">
+                <a href="https://nik-carousel.netlify.app/" target="_blank"><ion-icon name="desktop-sharp"
+                        class="service-icon"></ion-icon></a>
+                <h3>Web Design</h3>
+                <p>"It is not because things are difficult that we do not dare; it is because we do not dare that they
+                    are difficult."
+                </p>
+            </div>
+            <div class="service-box">
+                <a href="/404.html" target="_blank"><ion-icon name="logo-react" class="service-icon"></ion-icon></a>
+                <h3>Web Development</h3>
+                <p>"It is not because things are difficult that we do not dare; it is because we do not dare that they
+                    are difficult."
+                </p>
+            </div>
+            <div class="service-box">
+                <a href="/404.html" target="_blank"><ion-icon name="camera-outline" class="service-icon"></ion-icon></a>
+                <h3>photography</h3>
+                <p>"It is not because things are difficult that we do not dare; it is because we do not dare that they
+                    are difficult."
+                </p>
+            </div>
+            <div class="service-box">
+                <a href="/404.html" target="_blank"><ion-icon name="phone-portrait-sharp"
+                        class="service-icon"></ion-icon></a>
+                <h3>Mobile Apps</h3>
+                <p>"It is not because things are difficult that we do not dare; it is because we do not dare that they
+                    are difficult."
+                </p>
+            </div>
+            <div class="service-box">
+                <a href="/404.html" target="_blank"><ion-icon name="globe-sharp" class="service-icon"></ion-icon></a>
+                <h3>apps interface</h3>
+                <p>"It is not because things are difficult that we do not dare; it is because we do not dare that they
+                    are difficult."
+                </p>
+            </div>
+            <div class="service-box">
+                <a href="/404.html" target="_blank"><ion-icon name="images-sharp" class="service-icon"></ion-icon></a>
+                <h3>graphic design</h3>
+                <p>"It is not because things are difficult that we do not dare; it is because we do not dare that they
+                    are difficult."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+    Our testimonial Section Start
+    ========================================================== -->
+    <section class="section section-testimonial">
+        <div class="container">
+            <h2 class="common-heading">Happy Client Works</h2>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper mySwiper container">
+            <div class="swiper-wrapper">
+                <!-- section start -->
+                <div class="swiper-slide">
+                    <div class="swiper-client-msg">
+                        <p>
+                            Nik: You know sometimes when I'm talking, my words can't keep up with my thoughts ... I
+                            wonder why we think faster than we speak. Hobbies: Probably so we can thnk twice.
+                        </p>
+                    </div>
+                    <div class="swiper-client-data grid grid-two-column">
+
+                        <figure>
+                            <img src="Images/clients/a-min.jpg" alt="clients review">
+                        </figure>
+
+                        <div class="client-data-details">
+                            <p>Nishkarsh Gupta</p>
+                            <p>Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- section end -->
+                <div class="swiper-slide">
+                    <div class="swiper-client-msg">
+                        <p>
+                            Nik: You know sometimes when I'm talking, my words can't keep up with my thoughts ... I
+                            wonder why we think faster than we speak. Hobbies: Probably so we can thnk twice.
+                        </p>
+                    </div>
+                    <div class="swiper-client-data grid grid-two-column">
+                        <figure>
+                            <img src="Images/clients/b-min.jpg" alt="clients review">
+                        </figure>
+                        <div class="client-data-details">
+                            <p>Nishkarsh Gupta</p>
+                            <p>Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- section end -->
+                <div class="swiper-slide">
+                    <div class="swiper-client-msg">
+                        <p>
+                            Nik: You know sometimes when I'm talking, my words can't keep up with my thoughts ... I
+                            wonder why we think faster than we speak. Hobbies: Probably so we can thnk twice.
+                        </p>
+                    </div>
+                    <div class="swiper-client-data grid grid-two-column">
+                        <figure>
+                            <img src="Images/clients/c-min.jpg" alt="clients review">
+                        </figure>
+                        <div class="client-data-details">
+                            <p>Nishkarsh Gupta</p>
+                            <p>Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- section end -->
+                <div class="swiper-slide">
+                    <div class="swiper-client-msg">
+                        <p>
+                            Nik: You know sometimes when I'm talking, my words can't keep up with my thoughts ... I
+                            wonder why we think faster than we speak. Hobbies: Probably so we can thnk twice.
+                        </p>
+                    </div>
+                    <div class="swiper-client-data grid grid-two-column">
+                        <figure>
+                            <img src="Images/clients/d-min.jpg" alt="clients review">
+                        </figure>
+                        <div class="client-data-details">
+                            <p>Nishkarsh Gupta</p>
+                            <p>Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- section end -->
+                <div class="swiper-slide">
+                    <div class="swiper-client-msg">
+                        <p>
+                            Nik: You know sometimes when I'm talking, my words can't keep up with my thoughts ... I
+                            wonder why we think faster than we speak. Hobbies: Probably so we can thnk twice.
+                        </p>
+                    </div>
+                    <div class="swiper-client-data grid grid-two-column">
+                        <figure>
+                            <img src="Images/clients/e-min.jpg" alt="clients review">
+                        </figure>
+                        <div class="client-data-details">
+                            <p>Nishkarsh Gupta</p>
+                            <p>Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- section end -->
+                <div class="swiper-slide">
+                    <div class="swiper-client-msg">
+                        <p>
+                            Nik: You know sometimes when I'm talking, my words can't keep up with my thoughts ... I
+                            wonder why we think faster than we speak. Hobbies: Probably so we can thnk twice.
+                        </p>
+                    </div>
+                    <div class="swiper-client-data grid grid-two-column">
+                        <figure>
+                            <img src="Images/clients/f-min.jpg" alt="clients review">
+                        </figure>
+                        <div class="client-data-details">
+                            <p>Nishkarsh Gupta</p>
+                            <p>Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- section end -->
+                <div class="swiper-slide">
+                    <div class="swiper-client-msg">
+                        <p>
+                            Nik: You know sometimes when I'm talking, my words can't keep up with my thoughts ... I
+                            wonder why we think faster than we speak. Hobbies: Probably so we can thnk twice.
+                        </p>
+                    </div>
+                    <div class="swiper-client-data grid grid-two-column">
+                        <figure>
+                            <img src="Images/clients/g-min.jpg" alt="clients review">
+                        </figure>
+                        <div class="client-data-details">
+                            <p>Nishkarsh Gupta</p>
+                            <p>Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- section end -->
+                <div class="swiper-slide">
+                    <div class="swiper-client-msg">
+                        <p>
+                            Nik: You know sometimes when I'm talking, my words can't keep up with my thoughts ... I
+                            wonder why we think faster than we speak. Hobbies: Probably so we can thnk twice.
+                        </p>
+                    </div>
+                    <div class="swiper-client-data grid grid-two-column">
+                        <figure>
+                            <img src="Images/clients/h-min.jpg" alt="clients review">
+                        </figure>
+                        <div class="client-data-details">
+                            <p>Nishkarsh Gupta</p>
+                            <p>Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- section end -->
+                <div class="swiper-slide">
+                    <div class="swiper-client-msg">
+                        <p>
+                            Nik: You know sometimes when I'm talking, my words can't keep up with my thoughts ... I
+                            wonder why we think faster than we speak. Hobbies: Probably so we can thnk twice.
+                        </p>
+                    </div>
+                    <div class="swiper-client-data grid grid-two-column">
+                        <figure>
+                            <img src="Images/clients/a-min.jpg" alt="clients review">
+                        </figure>
+                        <div class="client-data-details">
+                            <p>Nishkarsh Gupta</p>
+                            <p>Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- section end -->
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+    Our Freelancing Section Start
+    ========================================================== -->
+
+    <section class="section section-freelancing">
+        <div class="overlay"></div>
+        <div class="container">
+            <h2>I am <span>available</span> for freelancing</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. non exercitationem voluptates nam error
+                reprehenderit architecto recusandae?
+            </p>
+            <a href="mailto:nishkarshgupta111@gmail.com" class="btn">HIRE ME</a>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+    Our Contact Section Start
+    ========================================================== -->
+
+    <section class="section section-contact" id="contact-section">
+        <div class="container">
+            <h2 class="common-heading">Contact Us</h2>
+        </div>
+        <div class="grid grid-two-column">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1774.9990868619843!2d78.38590620806809!3d27.156347682291262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397446ab00113491%3A0x6713f6cc31e2d675!2sChhidamilal%20Digambar%20Jain%20Mandir%2C%20Suhag%20Nagar%2C%20Firozabad%2C%20Uttar%20Pradesh%20283203!5e0!3m2!1sen!2sin!4v1673889172050!5m2!1sen!2sin"
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <div class="section-contact-main contact-container">
+                <form action="https://formspree.io/f/xpzewzrg" method="POST">
+                    <div class="grid grid-two-column">
+                        <div>
+                            <label for="username"></label>
+                            <input type="text" name="username" id="username" placeholder="Username" required
+                                autocomplete="off">
+                        </div>
+                        <div>
+                            <label for="email"></label>
+                            <input type="email" name="email" id="email" placeholder="demo@gmail.com" autocomplete="off"
+                                required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="subject"></label>
+                        <input type="text" name="subject" placeholder="subject" required autocomplete="off"
+                            id="subject">
+                    </div>
+                    <div>
+                        <label for="textarea"></label>
+                        <textarea name="message" id="textarea" placeholder="Write your message over here!" cols="30"
+                            required autocomplete="off" minlength="5" rows="10"></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" name="submit" id="submit" class="btn" value="Send Message">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+    Our footer Section Start
+    ========================================================== -->
+
+    <footer class="section section-footer">
+        <div class="container grid grid-four-column">
+            <div class="f-about">
+                <h3>about</h3>
+                <p>
+                    We have tested a number of registry fix and clean utilities and present out top 3 list on our site
+                    for your convenience. Hope you like it.
+                </p>
+            </div>
+            <!-- end -->
+
+            <div class="f-links">
+                <h3>links</h3>
+                <ul>
+                    <li>
+                        <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+                        <a href="#about-section">About</a>
+                    </li>
+                    <li>
+                        <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+                        <a href="#service-section">Services</a>
+                    </li>
+                    <li>
+                        <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+                        <a href="#portfolio-section">Portfolio</a>
+                    </li>
+                    <li>
+                        <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+                        <a href="#contact-section">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="f-services">
+                <h3>Services</h3>
+                <ul>
+                    <li>
+                        <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+                        <a href="#">Web Design</a>
+                    </li>
+                    <li>
+                        <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+                        <a href="#">Web Development</a>
+                    </li>
+                    <li>
+                        <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+                        <a href="#">Mern Project</a>
+                    </li>
+                    <li>
+                        <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+                        <a href="#">Online Classes</a>
+                    </li>
+                    <li>
+                        <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
+                        <a href="#">Youtube Course</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- end -->
+            <div class="f-address">
+                <h3>Have a Questions?</h3>
+                <address>
+                    <div>
+                        <p>
+                            <span><ion-icon name="location-outline"></ion-icon></span>
+                            Firozabad, India
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <span><ion-icon name="call-outline"></ion-icon></span>
+                            <a href="tel:+918937063925">+91 8937063925</a>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <span><ion-icon name="mail-outline"></ion-icon></span>
+                            <a href="mailto:nishkarshgupta111@gmail.com">nishkarshgupta111@gmail.com</a>
+                        </p>
+                    </div>
+                </address>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="f-social-icons">
+                <a href="https://instagram.com/nishkarsh.03?igshid=YmMyMTA2M2Y=" target="_blank">
+                    <ion-icon class="icons" name="logo-instagram"></ion-icon>
+                </a>
+
+                <a href="https://github.com/Nishkarshgupt?tab=repositories" target="_blank">
+                    <ion-icon class="icons" name="logo-github"></ion-icon>
+                </a>
+
+                <a href="https://www.linkedin.com/in/nishkarsh-gupta-/" target="_blank">
+                    <ion-icon class="icons" name="logo-linkedin"></ion-icon>
+                </a>
+            </div>
+            <div class="f-credits">
+                <p>
+                    Copyright @2023 All rights reserved | This template is made with ❤ by Nishkarsh Developer
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- scroll to top button -->
+
+
+    <!-- ==========================================================
+    Our JavaScript Section Start
+    ========================================================== -->
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+
+</body>
+
+</html>
