@@ -1,4 +1,78 @@
 // ============================================================
+// creating a cursor
+// ============================================================
+
+const cursorDot = document.querySelector("[data-cursor-dot]"); 
+const cursorOutline = document.querySelector("[data-cursor-outline]");
+
+window.addEventListener("mousemove", function(e){
+
+  const posX = e.clientX;
+  const posY = e.clientY;
+
+  // Small dot follows instantly
+  cursorDot.style.left = `${posX}px`;
+  cursorDot.style.top = `${posY}px`;
+  
+  //   cursorOutline.style.left = `${posX}px`;
+  //   cursorOutline.style.top = `${posY}px`;
+  
+
+  // Outline follows with slight delay
+  cursorOutline.animate({
+    left: `${posX}px`,
+    top: `${posY}px`
+  }, {duration: 600, fill: "forwards"});
+})
+
+
+
+
+
+
+// ============================================================
+// creating a Dark moode 
+// ============================================================
+const toggleButton = document.getElementById("theme-toggle");
+const body = document.body;
+
+// ✅ Page load hote hi theme apply ho jaye (No Delay)
+if (localStorage.getItem("theme") === "dark") {
+    enableDarkMode();
+} else {
+    disableDarkMode();  // Ye line add ki taaki transition proper ho
+}
+
+// ✅ Button Click -> Instant Theme Switch with Smooth Effect
+toggleButton.addEventListener("click", () => {
+    if (body.classList.contains("dark-mode")) {
+        disableDarkMode();
+    } else {
+        enableDarkMode();
+    }
+});
+
+// ✅ Function to Enable Dark Mode
+function enableDarkMode() {
+    body.classList.add("dark-mode");
+    localStorage.setItem("theme", "dark");
+    toggleButton.innerHTML = "☀️ Light Mode";
+}
+
+// ✅ Function to Disable Dark Mode
+function disableDarkMode() {
+    body.classList.remove("dark-mode");
+    localStorage.setItem("theme", "light");
+    toggleButton.innerHTML = "🌙 Dark Mode";
+}
+
+
+
+
+
+
+
+// ============================================================
 // creating a portfolio tabbed component
 // ============================================================
 

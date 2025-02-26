@@ -27,14 +27,17 @@
     --shadow: 0px 0px 20px 0px rgb(132 144 255 / 20%);
     --shadowSupport: 0px 20px 20px 0px rgb(132 144 255 / 30%);
 }
-html::-webkit-scrollbar{
-  width: .8rem;
+
+html::-webkit-scrollbar {
+    width: .8rem;
 }
-html::-webkit-scrollbar-track{
-  background: var(--gradient);
+
+html::-webkit-scrollbar-track {
+    background: var(--gradient);
 }
-html::-webkit-scrollbar-thumb{
-  background: #420177;
+
+html::-webkit-scrollbar-thumb {
+    background: #420177;
 }
 
 html {
@@ -48,8 +51,242 @@ html {
 
 body {
     overflow-x: hidden;
+    cursor: none;
+    background-color: white;
+    color: black;
+    /* transition: background 0.5s, color 0.5s; */
+    transition: background 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+/* ================================================================
+Dark Mode
+================================================================ */
+
+section,
+main,
+div,
+header,
+footer,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+li,
+a {
+    background-color: inherit;
+    color: inherit;
+    transition: background 0.5s, color 0.5s;
+    transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+
+/* Dark Mode Specific Styles */
+.dark-mode section,
+.dark-mode main,
+.dark-mode div,
+.dark-mode header,
+.dark-mode footer,
+.dark-mode p,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode li,
+.dark-mode a {
+    background-color: #121212;
+    /* Darker shade for better contrast */
+    color: white;
+}
+
+.dark-mode h1,
+h2,
+h3 {
+    text-shadow: 6px 6px 15px rgba(237, 152, 152, 0.9);
+}
+
+
+
+
+
+.dark-mode footer h3 {
+    text-shadow: 6px 6px 15px rgba(237, 152, 152, 0.9);
+}
+
+
+
+.dark-mode .header {
+    background: #121212 !important;
+    color: white !important;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode a {
+    color: white !important;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.dark-mode a:hover {
+    color: var(--helper) !important;
+}
+
+
+
+.dark-mode .section-hero .hero-heading {
+    text-shadow: 6px 6px 15px rgba(237, 152, 152, 0.9) !important;
+}
+
+
+.dark-mode .section-biodata {
+    filter: drop-shadow(5px 5px 5px rgba(84, 83, 83, 0.1));
+}
+
+.dark-mode .section-portfolio a {
+    background: transparent;
 
 }
+
+
+.dark-mode .section-work-data {
+    background: #121212;
+    /* Darker shade for better contrast */
+    color: white;
+    filter: drop-shadow(5px 5px 10px rgba(84, 83, 83, 0.9));
+}
+
+.dark-mode .section-services {
+    filter: drop-shadow(5px 5px 10px rgba(84, 83, 83, 0.9));
+}
+
+.dark-mode .section-freelancing .container h2,
+.dark-mode .section-freelancing .container p {
+    background: transparent;
+}
+
+.dark-mode .section-contact {
+    filter: drop-shadow(5px 5px 10px rgba(84, 83, 83, 0.9));
+}
+
+.dark-mode .section-contact-main textarea:hover,
+.dark-mode .section-contact-main input:hover {
+    filter: drop-shadow(6px 6px 15px rgba(237, 152, 152, 0.9));
+    box-shadow: 5px 5px 9px rgba(237, 152, 152, 0.9);
+}
+
+.dark-mode .section-contact-main textarea:focus,
+.dark-mode .section-contact-main input:focus {
+    filter: drop-shadow(6px 6px 15px rgba(237, 152, 152, 0.5));
+    box-shadow: 5px 5px 9px rgba(237, 152, 152, 0.5);
+}
+
+
+.dark-mode .section-contact iframe {
+    filter: drop-shadow(6px 6px 15px rgba(237, 152, 152, 0.58));
+}
+
+
+
+.dark-mode .scrollTop-style {
+    background: transparent;
+}
+
+/* ================================================================
+Cursor 
+================================================================ */
+
+.cursor-dot {
+    width: 5px;
+    height: 5px;
+    background-color: black;
+}
+
+.cursor-outline {
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    background: transparent;
+    /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.7); Light glow for visibility */
+    box-shadow: 5px 5px 9px rgba(43, 37, 37, 0.9);
+
+}
+
+.cursor-dot,
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 999;
+    pointer-events: none;
+}
+
+/* Dark Mode Cursor */
+.dark-mode .cursor-dot {
+    background-color: white;
+    /* White cursor in dark mode */
+}
+
+.dark-mode .cursor-outline {
+    border-color: hsla(0, 0%, 100%, 0.5);
+    /* Semi-transparent white outline */
+    background: transparent;
+    box-shadow: 5px 5px 9px rgba(237, 152, 152, 0.9);
+}
+
+/* toggle btn */
+
+/* Toggle Button Styling */
+.toggle-btn {
+    width: 140px;
+    height: 45px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(145deg, #222, #111);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    /* cursor: pointer; */
+    outline: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5),
+        -5px -5px 10px rgba(255, 255, 255, 0.1);
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+}
+
+/* Hover Effect */
+.toggle-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.7),
+        -5px -5px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Dark Mode Active Button */
+.dark-mode .toggle-btn {
+    background: linear-gradient(145deg, #444, #222);
+    color: yellow;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7),
+        -5px -5px 10px rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+/* ================================================================
+Basic Properties
+================================================================ */
 
 h1,
 h2,
@@ -63,6 +300,8 @@ h1 {
     font-size: 6rem;
     font-weight: 600;
 }
+
+
 
 h3 {
     font-size: 1.5rem;
@@ -78,6 +317,7 @@ p {
 
 a {
     text-decoration: none;
+    cursor: none;
 }
 
 li {
@@ -98,20 +338,42 @@ Header Section Start
     left: 0;
     position: fixed;
     width: 100%;
-    z-index: 9999;
+    z-index: 998;
     box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
 
 }
 
 .header .logo {
     height: 8rem;
-    /* position: relative;
-    left: 0.4rem; */
+    filter: drop-shadow(5px 5px 15px rgba(46, 32, 236, 0.9));
+    animation: glow 1.5s infinite alternate ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+@keyframes glow {
+    0% {
+        filter: drop-shadow(0px 0px 5px rgba(255, 0, 0, 0.6));
+    }
+
+    50% {
+        filter: drop-shadow(0px 0px 15px rgba(255, 0, 0, 1));
+    }
+
+    100% {
+        filter: drop-shadow(0px 0px 5px rgba(255, 0, 0, 0.6));
+    }
+}
+
+/* Add hover effect for more attraction */
+.header .logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 0, 1));
 }
 
 .navbar-lists {
     display: flex;
     gap: 4rem;
+    align-items: center;
 }
 
 .navbar-link:link,
@@ -123,12 +385,29 @@ Header Section Start
     text-transform: uppercase;
     color: var(--black);
     transition: color 0.3s linear;
-    /* font-family: 'Poppins', sans-serif; */
+    position: relative;
+}
+
+.navbar-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--helper);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
 }
 
 .navbar-link:hover,
 .navbar-link:active {
     color: var(--helper);
+}
+
+.navbar-link:hover::after {
+    transform: scaleX(1);
 }
 
 .mobile-navbar-btn {
@@ -147,9 +426,9 @@ Header Section Start
 /* ================================================================
 Reusable Code Section
 ================================================================ */
-
 .section {
     padding: 9rem 0;
+
 }
 
 .container {
@@ -232,12 +511,15 @@ Reusable Code Section
     min-width: 14rem;
     height: 0.2rem;
     background: var(--helper);
+    box-shadow: 6px 6px 15px rgba(237, 152, 152, 0.9);
+
 }
 
 /* ================================================================
 Hero Section Start
 ================================================================ */
 .section-hero {
+    /* padding: 14rem; */
     margin-top: 9rem;
     background-color: var(--bg);
 }
@@ -256,11 +538,43 @@ Hero Section Start
     color: var(--helper);
 }
 
+
 .hero-heading {
+    /* text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); */
+    /* text-shadow: 6px 6px 15px rgba(0, 0, 0, 0.9); */
+    /* text-shadow: 10px 10px 25px rgba(0, 0, 0, 1); */
     text-transform: uppercase;
     font-weight: 700;
     font-size: 5rem;
+
 }
+
+.text-shadow {
+    font-size: 5rem;
+    font-weight: 700;
+    color: black;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+    animation: glowing-text 1s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+}
+
+/* Faster & Smoother Shadow Animation */
+@keyframes glowing-text {
+    0% {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    50% {
+        text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.7);
+    }
+
+    100% {
+        text-shadow: 6px 6px 18px rgba(0, 0, 0, 0.9);
+    }
+}
+
+
+
+
 
 .hero-para {
     margin-top: 0.5rem;
@@ -537,6 +851,7 @@ our services Section Start
     border-radius: 5px;
     padding: 6.4rem 3.4rem;
     transition: all 0.2s linear;
+    filter: drop-shadow( 0 4px 10px rgba(52, 51, 51, 0.9));
 }
 
 .service-box:hover {
@@ -713,6 +1028,7 @@ Freelancing Section Start
 
 .section-freelancing .container {
     position: relative;
+    background: transparent;
 }
 
 .section-freelancing h2 {
@@ -767,6 +1083,19 @@ Contact Section Start
     width: 100%;
 }
 
+.section-contact-main textarea:hover,
+.section-contact-main input:hover {
+    filter: drop-shadow(6px 6px 15px rgba(0, 0, 0, 0.5));
+    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.5);
+}
+
+
+.section-contact-main textarea:focus,
+.section-contact-main input:focus {
+    filter: drop-shadow(6px 6px 15px rgba(0, 0, 0, 0.8));
+    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.8);
+}
+
 
 .section-contact-main input[type="submit"] {
     max-width: 35%;
@@ -779,6 +1108,9 @@ Contact Section Start
     margin-left: 10rem;
     height: 92%;
     width: 86%;
+    filter: drop-shadow(6px 6px 15px rgba(0, 0, 0, 0.5));
+    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.5);
+
 }
 
 /* ===================================================
@@ -863,6 +1195,7 @@ Scroll Section Start
 =================================================== */
 
 .scrollTop-style {
+    background: transparent;
     position: fixed;
     right: 2%;
     bottom: 5%;
@@ -955,6 +1288,11 @@ media queries
 
     .header {
         position: relative;
+    }
+
+    .dark-mode .navbar a {
+        background: var(--gradient) !important;
+        text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
     }
 
     .mobile-navbar-btn {
@@ -1073,9 +1411,23 @@ media queries
 
 }
 
+@media (max-width: 980px) {
+
+    .cursor-dot,
+    .cursor-outline {
+        display: none;
+    }
+}
+
 /* below 790px */
 
 @media(max-width: 49em) {
+
+    .dark-mode .navbar a {
+        background: var(--gradient) !important;
+        text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    }
+
     .container {
         max-width: 71rem;
     }
@@ -1130,10 +1482,11 @@ media queries
     .section-contact iframe {
         margin-left: 5rem;
     }
+
     .section-contact-main input[type="submit"] {
         max-width: 40%;
     }
-    
+
 
     /* below 560px */
     @media (max-width: 35em) {
@@ -1211,9 +1564,10 @@ media queries
             grid-template-columns: 1fr;
         }
 
-        .section-contact .grid{
+        .section-contact .grid {
             gap: 2rem;
         }
+
         .section-contact-main {
             max-width: 56rem;
             margin: 0;

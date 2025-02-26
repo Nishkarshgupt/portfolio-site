@@ -32,6 +32,18 @@
 </head>
 
 <body>
+    <!-- ==========================================================
+   Our cursor Section 
+   ========================================================== -->
+
+   <div class="cursor-dot" data-cursor-dot></div>
+   <div class="cursor-outline" data-cursor-outline></div>
+
+
+
+ <!-- ==========================================================
+   Our Header Section Start
+   ========================================================== -->   
     <header class="header">
         <img src="Images/logo 2.png" alt="our main image" class="logo">
 
@@ -42,6 +54,7 @@
                 <li><a href="#service-section" class="navbar-link service-link">Services</a></li>
                 <li><a href="#portfolio-section" class="navbar-link portfolio-link">Portfolio</a></li>
                 <li><a href="#contact-section" class="navbar-link contact-link">Contact</a></li>
+                <button  id="theme-toggle" class="toggle-btn">🌙 Dark Mode</button>
             </ul>
         </nav>
         <div class="mobile-navbar-btn">
@@ -49,6 +62,8 @@
             <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
         </div>
     </header>
+
+
 
     <!-- ==========================================================
     Our Main Hero Section Start
@@ -58,7 +73,7 @@
             <div class="container grid grid-two-column">
                 <div class="section-hero-data">
                     <p class="hero-top-data">this is me</p>
-                    <h1 class="hero-heading">Nishkarsh Gupta
+                    <h1 class="hero-heading text-shadow">Nishkarsh Gupta
                     </h1>
                     <p class="hero-para">I,m Nishkarsh Gupta. A Frontend Developer, IInd year Student and Freelancer. A
                         Frontend Developer, IInd year Student and Freelancer.</p>
@@ -131,7 +146,7 @@
                     </div>
                 </div>
                 <div class="bio-data-btn ">
-                    <a href="https://drive.google.com/file/d/1LobVlk9hpZsqMNJVmgBOGpyf2SueKJnx/view?usp=share_link"
+                    <a href="https://drive.google.com/file/d/1H0tyIZZ3lHnTQE9oZezXuSQGqsDuEmKr/view?usp=sharing"
                         download target="_blank" style="padding: 1.36rem 2.25rem;" class="btn">Download CV</a>
                 </div>
             </div>
@@ -144,15 +159,14 @@
     <section class="section section-portfolio" id="portfolio-section">
         <div class="container">
             <h2 class="common-heading">Latest Works</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing Lorem, ipsum dolor.elit. Cupiditate veniam praesentium
-                illum.
+            <p>Explore my recent projects showcasing creativity, innovation, and attention to detail. These works highlight my expertise in Web Development.
             </p>
         </div>
 
         <div class="p-btns">
-            <div class="btn p-btn" data-btn-num="1">Website</div>
-            <div class="btn p-btn" data-btn-num="2">Youtube</div>
-            <div class="btn p-btn" data-btn-num="3">Design</div>
+            <div class="btn p-btn" data-btn-num="1">Website's</div>
+            <div class="btn p-btn" data-btn-num="2">Frontend</div>
+            <div class="btn p-btn" data-btn-num="3">Full Stack</div>
         </div>
 
         <div class="container grid grid-three-column portfolio-images">
@@ -236,8 +250,8 @@
     <section class="section section-services" id="service-section">
         <div class="container">
             <h2 class="common-heading">Services Offers</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum velit nemo soluta sapiente incidunt animi,
-                repellendus possimus excepturi dolor?
+            <p>I provide complete web solutions, including web design, development, frontend, and backend services. I create responsive, modern websites tailored to your business needs. Whether it’s a simple site or complex app, I deliver high-quality results to enhance your online presence.
+
             </p>
         </div>
 
@@ -248,44 +262,38 @@
                 <a href="https://nik-carousel.netlify.app/" target="_blank"><ion-icon name="desktop-sharp"
                         class="service-icon"></ion-icon></a>
                 <h3>Web Design</h3>
-                <p>"It is not because things are difficult that we do not dare; it is because we do not dare that they
-                    are difficult."
+                <p>I create visually appealing, user-friendly websites, ensuring they reflect your brand and provide seamless, responsive experiences.
                 </p>
             </div>
             <div class="service-box">
                 <a href="/404.html" target="_blank"><ion-icon name="logo-react" class="service-icon"></ion-icon></a>
                 <h3>Web Development</h3>
-                <p>"It is not because things are difficult that we do not dare; it is because we do not dare that they
-                    are difficult."
+                <p>I build fast, secure, and scalable websites or applications, tailored to meet your unique business needs effectively.
                 </p>
             </div>
             <div class="service-box">
                 <a href="/404.html" target="_blank"><ion-icon name="camera-outline" class="service-icon"></ion-icon></a>
                 <h3>photography</h3>
-                <p>"It is not because things are difficult that we do not dare; it is because we do not dare that they
-                    are difficult."
+                <p>I capture high-quality photos that highlight your brand, whether for products, events, or portraits, professionally.
                 </p>
             </div>
             <div class="service-box">
                 <a href="/404.html" target="_blank"><ion-icon name="phone-portrait-sharp"
                         class="service-icon"></ion-icon></a>
                 <h3>Mobile Apps</h3>
-                <p>"It is not because things are difficult that we do not dare; it is because we do not dare that they
-                    are difficult."
+                <p>I develop intuitive, engaging mobile apps, offering smooth user experiences and helping your app stand out.
                 </p>
             </div>
             <div class="service-box">
                 <a href="/404.html" target="_blank"><ion-icon name="globe-sharp" class="service-icon"></ion-icon></a>
                 <h3>apps interface</h3>
-                <p>"It is not because things are difficult that we do not dare; it is because we do not dare that they
-                    are difficult."
+                <p>I design clean, user-friendly interfaces that enhance usability and ensure a smooth, enjoyable user experience.
                 </p>
             </div>
             <div class="service-box">
                 <a href="/404.html" target="_blank"><ion-icon name="images-sharp" class="service-icon"></ion-icon></a>
                 <h3>graphic design</h3>
-                <p>"It is not because things are difficult that we do not dare; it is because we do not dare that they
-                    are difficult."
+                <p>I craft custom graphic designs, from logos to marketing materials, ensuring your brand’s message stands out effectively.
                 </p>
             </div>
         </div>
@@ -592,12 +600,9 @@
                     </li>
                     <li>
                         <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
-                        <a href="#">Online Classes</a>
+                        <a href="#">Portfolio</a>
                     </li>
-                    <li>
-                        <span><ion-icon name="arrow-forward-outline"></ion-icon></span>
-                        <a href="#">Youtube Course</a>
-                    </li>
+                   
                 </ul>
             </div>
             <!-- end -->
